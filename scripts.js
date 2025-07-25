@@ -16,6 +16,7 @@ async function fetchNews() {
 //Function call
 fetchNews();
 
+//Function to append elements in the news div
 function displayNews(articles) {
     const newsDiv = document.querySelector('#news');
 
@@ -46,3 +47,24 @@ function displayNews(articles) {
       newsDiv.appendChild(articleDiv);
     }
 }
+
+//Search bar
+//Event listener on search button using the value of the input
+document.getElementById('search-button').addEventListener('click', async () => {
+    //Asynchronous anonymous function on click
+    document.getElementById('news').innerHTML = ''; //clear page before showing search results
+
+    const query = document.getElementById('search-input').value; //query is the value of the input
+
+    if (!query.trim()) return; //(trim to remove any potential whitespace) if string is empty return cancels the function
+
+    //else, if string not empty: include query in the search url
+    const searchUrl = `https://newsapi.org/v2/top-headlines?country=us&category=technology&q=${encodeURIComponent(query)}&apiKey=${apiKey}`;
+
+    //try and catch block in case any error occurs while trying to fetch the search url
+    try {
+        const response = await fetch(searchUrl);
+        const data = await response.json();
+        displayNews(data.articles);}   
+    catch (error) {console.error('Search failed:', error);}
+});
