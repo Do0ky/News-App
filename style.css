@@ -1,4 +1,4 @@
-/*General reset and typo*/
+/*Body reset, background, and font*/
 body {
     margin: 0;
     padding: 0;
@@ -59,4 +59,35 @@ img {
 p {
   font-size: 0.9em;
   margin: 1em;
+}
+
+/* search bar container */
+#search-container {
+  text-align: center;
+  padding: 1em;
+  background-color: #0403209d;
+}
+/* search bar input */
+#search-input {
+  padding: 0.5em;
+  width: 60%;
+  max-width: 400px;
+  font-size: 1em;
+  border: 1px solid #250ea7;
+  border-radius: 4px;
+  background-color: #51439e5d;
+}
+/* search button */
+#search-button {
+  padding: 0.5em 1em;
+  margin-left: 0.5em;
+  font-size: 1em;
+  border: none;
+  background-color: #010241be;
+  color: rgb(190, 191, 255);
+  border-radius: 4px;
+  cursor: pointer;
+}
+#search-button:hover {
+  background-color: #333;
 }
