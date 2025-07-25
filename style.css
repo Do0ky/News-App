@@ -1,0 +1,62 @@
+/*General reset and typo*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background-color: #333;
+    color: #c7c8fc;
+}
+/* Main title */
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    padding: 1em;
+    background-color: #222;
+    color: #fff;
+    margin: 0;
+}
+/* News container */
+#news {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5em;
+    padding: 2em;
+}
+/* articleDiv card */
+#news > div {
+    background-color: #4e4e5c;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: justify;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+/* articleDiv card hover */
+#news > div:hover {
+    transform: translateY(-4px);
+}
+/* articleDiv title h3 */
+h3 {
+  font-size: 1.2em;
+  margin: 1em 0.8em 0 0.8em;
+}
+/* articleDiv author h6 */
+h6 {
+  font-size: 0.9em;
+  margin: 1em 1em;
+  color: #7a83b3;
+}
+/* articleDiv image */
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 180px;
+}
+/* articleDiv description */
+p {
+  font-size: 0.9em;
+  margin: 1em;
+}

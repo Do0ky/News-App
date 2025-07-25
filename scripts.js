@@ -1,7 +1,7 @@
 //Global variables
 const apiKey = process.env.NEWS_API_KEY; //storing the API key
 //This string represents the API endpoint
-const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}` //inserting the API key into the string via template liteal
+const url = `https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=${apiKey}` //inserting the API key into the string via template liteal
 
 //Asynchronous function: fetching with async/await
 async function fetchNews() {
